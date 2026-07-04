@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://saicharan3679.github.io/portfolio/sitemap.xml
