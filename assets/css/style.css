@@ -1784,6 +1784,7 @@ transform:translate(-120px,-100px);
 
 }
 
+
 .oracle-cert{
 
     margin:30px 0;
@@ -1801,5 +1802,10 @@ transform:translate(-120px,-100px);
 .oracle-cert hr{
 
     margin:20px 0;
+
+}
+.achievement-card .btn{
+
+    margin-top:20px;
 
 }
