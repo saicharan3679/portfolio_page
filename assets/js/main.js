@@ -277,29 +277,19 @@ speed:400
 GSAP INTRO
 ==============================*/
 
-gsap.fromTo(
-    ".hero-left",
-    { x: -100, opacity: 0 },
-    {
-        x: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power3.out",
-        clearProps: "transform,opacity"
-    }
-);
+gsap.from(".hero-left",{
+    x:-100,
+    opacity:0,
+    duration:1.2,
+    ease:"power3.out"
+});
 
-gsap.fromTo(
-    ".hero-right",
-    { x: 100, opacity: 0 },
-    {
-        x: 0,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power3.out",
-        clearProps: "transform,opacity"
-    }
-);
+gsap.from(".hero-right",{
+    x:100,
+    opacity:0,
+    duration:1.2,
+    ease:"power3.out"
+});
 
 gsap.from(".navbar",{
 
@@ -360,7 +350,4 @@ form.reset();
 });
 
 }
-window.addEventListener("load", () => {
-    gsap.set(".hero-left", { clearProps: "all" });
-    gsap.set(".hero-right", { clearProps: "all" });
-});
+
