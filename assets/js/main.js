@@ -351,3 +351,21 @@ form.reset();
 
 }
 
+/* google Achievements */
+
+function openCloudModal() {
+    document.getElementById("cloudModal").style.display = "flex";
+}
+
+function closeCloudModal() {
+    document.getElementById("cloudModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("cloudModal");
+
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
