@@ -360,3 +360,7 @@ form.reset();
 });
 
 }
+window.addEventListener("load", () => {
+    gsap.set(".hero-left", { clearProps: "all" });
+    gsap.set(".hero-right", { clearProps: "all" });
+});
