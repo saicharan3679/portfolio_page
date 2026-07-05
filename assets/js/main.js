@@ -369,3 +369,31 @@ window.onclick = function(event) {
     }
 }
 
+/*==============================
+ORACLE MODAL
+==============================*/
+
+function openOracleModal(){
+
+    document.getElementById("oracleModal").style.display="flex";
+
+}
+
+function closeOracleModal(){
+
+    document.getElementById("oracleModal").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+    const modal=document.getElementById("oracleModal");
+
+    if(event.target==modal){
+
+        modal.style.display="none";
+
+    }
+
+}
+
