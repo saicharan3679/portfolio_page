@@ -361,13 +361,7 @@ function closeCloudModal() {
     document.getElementById("cloudModal").style.display = "none";
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById("cloudModal");
 
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 /*==============================
 ORACLE MODAL
@@ -385,15 +379,19 @@ function closeOracleModal(){
 
 }
 
-window.onclick=function(event){
+window.onclick = function(event) {
 
-    const modal=document.getElementById("oracleModal");
+    const cloudModal = document.getElementById("cloudModal");
+    const oracleModal = document.getElementById("oracleModal");
 
-    if(event.target==modal){
-
-        modal.style.display="none";
-
+    if (cloudModal && event.target === cloudModal) {
+        cloudModal.style.display = "none";
     }
 
+    if (oracleModal && event.target === oracleModal) {
+        oracleModal.style.display = "none";
+    }
 }
+
+
 
