@@ -4,7 +4,7 @@
 
 ### Software Developer • Cloud Enthusiast • Machine Learning Learner
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&duration=3500&pause=1000&center=true&vCenter=true&width=700&lines=Welcome+to+My+Portfolio;Python+Developer;Cloud+Computing+Enthusiast;Machine+Learning+Learner;Always+Learning+New+Technologies" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&duration=3500&pause=1000&center=true&vCenter=true&width=700&lines=Welcome+to+My+Portfolio;Python+Developer;Cloud+Computing+Enthusiast;Machine+Learning+Learner;Always+Learning+New+Technologies"  />
 
 </div>
 
