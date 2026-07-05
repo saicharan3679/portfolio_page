@@ -277,39 +277,39 @@ speed:400
 GSAP INTRO
 ==============================*/
 
-// gsap.from(".hero-left",{
+gsap.from(".hero-left",{
 
-// x:-100,
+x:-100,
 
-// opacity:0,
+opacity:0,
 
-// duration:1.2,
+duration:1.2,
 
-// ease:"power3.out"
+ease:"power3.out"
 
-// });
+});
 
-// gsap.from(".hero-right",{
+gsap.from(".hero-right",{
 
-// x:100,
+x:100,
 
-// opacity:0,
+opacity:0,
 
-// duration:1.2,
+duration:1.2,
 
-// ease:"power3.out"
+ease:"power3.out"
 
-// });
+});
 
-// gsap.from(".navbar",{
+gsap.from(".navbar",{
 
-// y:-100,
+y:-100,
 
-// opacity:0,
+opacity:0,
 
-// duration:1
+duration:1
 
-// });
+});
 
 
 /*==============================
