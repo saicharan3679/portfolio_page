@@ -541,10 +541,14 @@ I'm <strong>K.L. Sai Charan Tej</strong>, a B.Tech Computer Science student pass
 
     <div class="achievement-grid">
 
-        <div class="achievement-card">
+        <div class="achievement-card" onclick="openCloudModal()">
             <i class="fa-solid fa-award"></i>
             <h3>Google Cloud Skills Boost</h3>
             <p>Completed hands-on cloud labs and earned multiple badges.</p>
+
+            <button class="btn secondary">
+                View Details
+            </button>
         </div>
 
         <div class="achievement-card">
@@ -808,6 +812,38 @@ I'm <strong>K.L. Sai Charan Tej</strong>, a B.Tech Computer Science student pass
 <script src="assets/js/particles.js"></script>
 
 <script src="assets/js/scroll.js"></script>
+
+<!-- Google Cloud Modal -->
+    
+<div id="cloudModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeCloudModal()">&times;</span>
+
+        <h2>Google Cloud Study Jams</h2>
+
+        <img src="assets/images/google-cloud-1.jpg">
+
+        <img src="assets/images/google-cloud-2.jpg">
+
+        <img src="assets/images/google-cloud-3.jpg">
+
+        <p>
+            Successfully completed Google Cloud Skills Boost learning paths and
+            received Google Cloud Study Jams swag during the official
+            distribution ceremony conducted at SVCE Tirupati.
+        </p>
+
+        <a href="https://www.skills.google/public_profiles/67b45557-6ddc-460e-9ecc-efa101427f62"
+           target="_blank"
+           class="btn primary">
+           View Google Skills Profile
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 
