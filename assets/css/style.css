@@ -135,11 +135,8 @@ display:block;
 /*================ SECTION =================*/
 
 section{
-
-padding:120px 10%;
-
-position:relative;
-
+    padding:120px 30px;
+    position:relative;
 }
 
 
@@ -742,9 +739,9 @@ align-items:center;
 
 position:relative;
 
-width:450px;
-
-height:450px;
+width:min(450px,100%);
+aspect-ratio:1;
+height:auto;
 
 display:flex;
 
@@ -826,7 +823,7 @@ justify-content:center;
 
 .about-image img{
 
-width:420px;
+width:min(420px,100%);
 
 border-radius:30px;
 
@@ -1523,7 +1520,7 @@ transform:translateY(-8px);
 
 background:var(--card);
 
-padding:45px;
+padding:35px;
 
 border-radius:25px;
 
@@ -1866,9 +1863,7 @@ transform:translate(-120px,-100px);
 
 
 
-*{
-    max-width:100%;
-}
+
 
 body,
 html{
@@ -1878,4 +1873,16 @@ html{
 img{
     max-width:100%;
     height:auto;
+}
+
+
+img,
+video,
+iframe{
+    max-width:100%;
+    height:auto;
+}
+
+section{
+    overflow:hidden;
 }
