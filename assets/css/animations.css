@@ -144,20 +144,10 @@ KEYFRAMES
 HERO
 ==============================*/
 
-.hero-left{
 
-    animation:fadeLeft 1s ease;
-
-}
-
-.hero-right{
-
-    animation:fadeRight 1s ease;
-
-}
 
 .profile-card{
-    animation:floatImage 8s ease-in-out infinite;
+    animation:none;
     will-change:transform;
 }
 
