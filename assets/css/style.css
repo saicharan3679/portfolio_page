@@ -764,7 +764,9 @@ background:linear-gradient(135deg,var(--primary),var(--secondary),var(--accent))
 
 animation:rotateRing 10s linear infinite;
 
-filter:blur(2px);
+filter:none;
+
+opacity:.85;
 
 }
 
@@ -787,6 +789,11 @@ background:#0f172a;
 box-shadow:0 30px 80px rgba(0,0,0,.45);
 
 z-index:2;
+
+image-rendering:auto;
+backface-visibility:hidden;
+transform:translateZ(0);
+
 
 }
 
