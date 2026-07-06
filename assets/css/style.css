@@ -253,45 +253,88 @@ letter-spacing:2px;
 
 /*================ CURSOR =================*/
 
+/*==============================
+CUSTOM CURSOR
+==============================*/
+
+.cursor,
+.cursor2{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transition:
+        width .25s,
+        height .25s,
+        opacity .25s,
+        background .25s,
+        border .25s;
+
+}
+
 .cursor{
 
-position:fixed;
+    width:34px;
+    height:34px;
 
-width:15px;
+    border:2px solid var(--primary-color);
 
-height:15px;
-
-background:white;
-
-border-radius:50%;
-
-pointer-events:none;
-
-mix-blend-mode:difference;
-
-z-index:999999;
-
-transition:.08s;
+    border-radius:50%;
 
 }
 
 .cursor2{
 
-position:fixed;
+    width:8px;
+    height:8px;
 
-width:45px;
+    background:var(--primary-color);
 
-height:45px;
+    border-radius:50%;
 
-border:2px solid rgba(255,255,255,.4);
+}
 
-border-radius:50%;
+.cursor.active{
 
-pointer-events:none;
+    width:55px;
+    height:55px;
 
-z-index:999998;
+    background:rgba(99,102,241,.12);
 
-transition:.18s;
+}
+
+.cursor2.active{
+
+    transform:scale(1.8);
+
+}
+
+.cursor.click{
+
+    transform:scale(.8);
+
+}
+
+.cursor2.click{
+
+    transform:scale(.6);
+
+}
+
+@media (pointer:coarse){
+
+    .cursor,
+    .cursor2{
+
+        display:none;
+
+    }
 
 }
 
