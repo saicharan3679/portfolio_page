@@ -2,54 +2,163 @@
             SCROLL.JS
 =========================================*/
 
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", () => {
 
-const speed = 150;
+    const progressBar = document.getElementById("progress-bar");
+    const topBtn = document.getElementById("topBtn");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const sections = document.querySelectorAll("section");
+    const reveals = document.querySelectorAll(".reveal");
 
-const startCounter = () => {
+    /*==============================
+    SCROLL PROGRESS
+    ==============================*/
 
-    counters.forEach(counter => {
+    function updateProgress() {
 
-        const update = () => {
+        const scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
 
-            const target = +counter.dataset.target;
+        const scrollHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
 
-            const count = +counter.innerText;
+        const progress = (scrollTop / scrollHeight) * 100;
 
-            const increment = target / speed;
+        if (progressBar) {
+            progressBar.style.width = progress + "%";
+        }
 
-            if (count < target) {
+    }
 
-                counter.innerText = Math.ceil(count + increment);
+    /*==============================
+    ACTIVE NAVIGATION
+    ==============================*/
 
-                setTimeout(update, 15);
+    function activeNavigation() {
 
-            } else {
+        let current = "";
 
-                counter.innerText = target;
+        sections.forEach((section) => {
+
+            const top = section.offsetTop - 180;
+
+            if (window.scrollY >= top) {
+
+                current = section.id;
 
             }
 
-        };
+        });
 
-        update();
+        navLinks.forEach((link) => {
 
-    });
+            link.classList.remove("active");
 
-};
+            if (link.getAttribute("href") === "#" + current) {
 
-const observer = new IntersectionObserver(entries => {
+                link.classList.add("active");
 
-    entries.forEach(entry => {
+            }
 
-        if (entry.isIntersecting) {
+        });
 
-            startCounter();
+    }
+
+    /*==============================
+    BACK TO TOP
+    ==============================*/
+
+    function backToTop() {
+
+        if (!topBtn) return;
+
+        if (window.scrollY > 450) {
+
+            topBtn.classList.add("show");
+
+        } else {
+
+            topBtn.classList.remove("show");
 
         }
 
-    });
+    }
+
+    if (topBtn) {
+
+        topBtn.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
+
+    /*==============================
+    REVEAL
+    ==============================*/
+
+    function reveal() {
+
+        reveals.forEach((item) => {
+
+            const top = item.getBoundingClientRect().top;
+
+            const visible = window.innerHeight - 120;
+
+            if (top < visible) {
+
+                item.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+    /*==============================
+    THROTTLED SCROLL
+    ==============================*/
+
+    let ticking = false;
+
+    function onScroll() {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(() => {
+
+                updateProgress();
+                activeNavigation();
+                backToTop();
+                reveal();
+
+                ticking = false;
+
+            });
+
+            ticking = true;
+
+        }
+
+    }
+
+    window.addEventListener("scroll", onScroll);
+
+    /*==============================
+    INITIAL LOAD
+    ==============================*/
+
+    updateProgress();
+    activeNavigation();
+    backToTop();
+    reveal();
 
 });
-
-counters.forEach(counter => observer.observe(counter));
