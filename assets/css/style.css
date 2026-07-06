@@ -414,11 +414,12 @@ background:linear-gradient(90deg,var(--primary),var(--secondary));
 }
 
 .nav-links{
-
-display:flex;
-
-gap:35px;
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1.5rem;
+    flex-wrap:wrap;
+    max-width:100%;
 }
 
 .nav-links a{
