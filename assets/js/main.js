@@ -84,98 +84,6 @@ window.addEventListener("scroll",()=>{
 
 
 /*==============================
-ACTIVE NAVIGATION
-==============================*/
-
-const sections=document.querySelectorAll("section");
-
-const navItems=document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll",()=>{
-
-let current="";
-
-sections.forEach(section=>{
-
-const sectionTop=section.offsetTop-150;
-
-const sectionHeight=section.clientHeight;
-
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id");
-
-}
-
-});
-
-navItems.forEach(link=>{
-
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
-
-});
-
-});
-
-
-/*==============================
-BACK TO TOP
-==============================*/
-
-const topBtn=document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-topBtn.classList.add("show");
-
-}else{
-
-topBtn.classList.remove("show");
-
-}
-
-});
-
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-
-/*==============================
-SCROLL PROGRESS BAR
-==============================*/
-
-window.addEventListener("scroll",()=>{
-
-const winScroll=document.body.scrollTop||document.documentElement.scrollTop;
-
-const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-
-const scrolled=(winScroll/height)*100;
-
-document.getElementById("progress-bar").style.width=scrolled+"%";
-
-});
-
-
-/*==============================
 THEME TOGGLE
 ==============================*/
 
@@ -300,35 +208,6 @@ opacity:0,
 duration:1
 
 });
-
-
-/*==============================
-REVEAL ON SCROLL
-==============================*/
-
-const reveals=document.querySelectorAll(".reveal");
-
-function reveal(){
-
-reveals.forEach(item=>{
-
-const windowHeight=window.innerHeight;
-
-const revealTop=item.getBoundingClientRect().top;
-
-const revealPoint=120;
-
-if(revealTop<windowHeight-revealPoint){
-
-item.classList.add("active");
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll",reveal);
 
 
 /*==============================
