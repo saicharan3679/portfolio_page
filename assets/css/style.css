@@ -148,9 +148,9 @@ content:"";
 
 position:fixed;
 
-width:600px;
+width:400px;
 
-height:600px;
+height:400px;
 
 background:var(--primary);
 
@@ -160,7 +160,7 @@ opacity:.18;
 
 top:-250px;
 
-left:-250px;
+left:-180px;
 
 z-index:-10;
 
@@ -174,9 +174,9 @@ content:"";
 
 position:fixed;
 
-width:500px;
+width:350px;
 
-height:500px;
+height:350px;
 
 background:var(--secondary);
 
@@ -186,7 +186,7 @@ opacity:.15;
 
 bottom:-250px;
 
-right:-250px;
+right:-180px;
 
 z-index:-10;
 
@@ -1883,6 +1883,3 @@ iframe{
     height:auto;
 }
 
-section{
-    overflow:hidden;
-}
