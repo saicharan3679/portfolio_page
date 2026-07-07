@@ -731,14 +731,41 @@ box-shadow:0 20px 45px rgba(99,102,241,.45);
     border-radius:50%;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     position:relative;
 
-    overflow:hidden;
+    overflow:visible;
+
+}
+
+.profile-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        45deg,
+        #00d4ff,
+        #6c63ff,
+        #ff4ecd,
+        #00d4ff
+    );
+
+    background-size:300% 300%;
+
+    filter:blur(45px);
+
+    z-index:1;
+
+    animation:gradientGlow 8s linear infinite;
 
 }
 
@@ -765,6 +792,20 @@ box-shadow:0 20px 45px rgba(99,102,241,.45);
     position:relative;
 
     z-index:2;
+
+    animation:floatImage 4s ease-in-out infinite;
+
+    box-shadow:
+        0 0 25px rgba(0,212,255,.45),
+        0 0 70px rgba(108,99,255,.30);
+
+    transition:.4s;
+
+}
+
+.profile-card img:hover{
+
+    transform:scale(1.03);
 
 }
 
@@ -1850,5 +1891,39 @@ video,
 iframe{
     max-width:100%;
     height:auto;
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes gradientGlow{
+
+    0%{
+        background-position:0% 50%;
+        transform:rotate(0deg);
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+        transform:rotate(360deg);
+    }
+
 }
 
