@@ -284,17 +284,34 @@ header{
 
     position:fixed;
     top:75px;
-    right:-100%;
-    width:100%;
+    left:100%;
+    right:auto;
+
+    width:100vw;
+    max-width:100vw;
+
     height:calc(100vh - 75px);
+
     background:#050816;
+
     flex-direction:column;
     justify-content:flex-start;
     align-items:center;
+
     gap:28px;
     padding-top:50px;
-    transition:.4s ease;
+
+    transition:left .4s ease;
+
+    overflow-x:hidden;
+
     z-index:999;
+
+}
+
+.nav-links.active{
+
+    left:0;
 
 }
 
