@@ -16,6 +16,12 @@ body{
     width:100%;
     overflow-x:hidden;
 }
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
 
 *,
 *::before,
@@ -680,35 +686,37 @@ EDUCATION
 
 @media (max-width:768px){
 
-.timeline{
+    .timeline{
+        padding-left:0;
+        margin-left:0;
+    }
 
-    padding-left:15px;
+    .timeline::before{
+        left:20px;
+    }
 
-}
+    .timeline-item{
+        width:100%;
+        margin-left:45px;
+        padding-left:25px;
+        gap:15px;
+    }
 
-.timeline-item{
+    .timeline-dot{
+        left:20px;
+    }
 
-    gap:15px;
+    .timeline-content{
+        padding:20px;
+    }
 
-}
+    .timeline-content h3{
+        font-size:1.2rem;
+    }
 
-.timeline-content{
-
-    padding:20px;
-
-}
-
-.timeline-content h3{
-
-    font-size:1.2rem;
-
-}
-
-.timeline-content h4{
-
-    font-size:1rem;
-
-}
+    .timeline-content h4{
+        font-size:1rem;
+    }
 
 }
 
@@ -1153,5 +1161,57 @@ svg{
     line-height:1.8;
 
 }
+
+}
+
+*{
+    box-sizing:border-box;
+}
+
+img,
+svg,
+video{
+    max-width:100%;
+    height:auto;
+}
+
+section{
+    overflow-x:hidden;
+}
+
+
+body.light-theme .hero-title{
+    color:#111827 !important;
+}
+
+body.light-theme .hero-subtitle{
+    color:#2563eb !important;
+}
+
+body.light-theme .hero-description{
+    color:#4b5563 !important;
+}
+
+body.light-theme footer{
+    background:#f8fafc;
+}
+
+body.light-theme footer p,
+body.light-theme footer a,
+body.light-theme footer span{
+    color:#374151 !important;
+}
+
+body.light-theme .skill-card,
+body.light-theme .project-card,
+body.light-theme .education-card,
+body.light-theme .certificate-card,
+body.light-theme .contact-form{
+
+    background:#ffffff;
+
+    color:#1f2937;
+
+    border:1px solid #e5e7eb;
 
 }
