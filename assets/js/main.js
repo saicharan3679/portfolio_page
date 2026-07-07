@@ -129,7 +129,7 @@ dark=true;
 /*==============================
 VANILLA TILT
 ==============================*/
-
+if (window.innerWidth > 768) {
 VanillaTilt.init(
 
 document.querySelectorAll(".project-card"),
@@ -147,6 +147,9 @@ glare:true,
 }
 
 );
+}
+
+if (window.innerWidth > 768) {
 
 VanillaTilt.init(
 
@@ -165,6 +168,7 @@ glare:true,
 }
 
 );
+}
 
 VanillaTilt.init(
 
