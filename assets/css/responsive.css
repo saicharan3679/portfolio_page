@@ -361,13 +361,15 @@ TABLET (991px)
 
 }
 
-.hero,
-.about-container,
-.contact-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:40px;
+@media (max-width: 992px){
+    .hero,
+    .about-container,
+    .contact-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:40px;
+    }
 }
 
 .hero-left,
