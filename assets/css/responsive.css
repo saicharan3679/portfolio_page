@@ -145,11 +145,7 @@ STANDARD LAPTOP
 
 }
 
-.profile-card img{
 
-    width:330px;
-
-}
 
 .skills-container{
 
@@ -356,7 +352,12 @@ TABLET (991px)
 }
 
 .profile-card img{
-    width:300px;
+    width:100%;
+    max-width:280px;
+    height:auto;
+    object-fit:cover;
+}
+
 }
 
 }
