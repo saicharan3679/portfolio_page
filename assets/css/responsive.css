@@ -115,7 +115,7 @@ section{
     top:75px;
     left:-100%;
 
-    width:100vw;
+    width:100%;
     height:calc(100vh - 75px);
 
     display:flex;
@@ -288,7 +288,6 @@ TABLET (991px)
 
 }
 
-}
 
 @media (max-width: 992px){
     .hero,
@@ -1099,11 +1098,6 @@ body{
 
 }
 
-.container{
-    width:100%;
-    max-width:1200px;
-    margin:0 auto;
-}
 
 .hero,
 .about-container,
