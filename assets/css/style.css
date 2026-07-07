@@ -736,7 +736,7 @@ box-shadow:0 20px 45px rgba(99,102,241,.45);
 
     position:relative;
 
-    overflow:visible;
+    overflow:hidden;
 
 }
 
@@ -763,7 +763,8 @@ box-shadow:0 20px 45px rgba(99,102,241,.45);
 
     filter:blur(45px);
 
-    z-index:1;
+    z-index:0;
+    pointer-events:none;
 
     animation:gradientGlow 8s linear infinite;
 
@@ -782,14 +783,15 @@ box-shadow:0 20px 45px rgba(99,102,241,.45);
 
 .profile-card img{
 
-    width:390px;
-    height:390px;
+   width:min(390px,90vw);
+   height:min(390px,90vw);
 
     object-fit:cover;
 
     border-radius:50%;
 
     position:relative;
+    display:block;
 
     z-index:2;
 
