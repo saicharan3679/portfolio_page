@@ -4,7 +4,7 @@
 
 const typingElement = document.querySelector(".typing");
 
-if (typingElement) {
+if (typingElement && typeof Typed !== "undefined") {
 
     new Typed(".typing", {
 
@@ -12,7 +12,7 @@ if (typingElement) {
 
             "Software Developer",
 
-            "Python Developer",
+            "Java Developer",
 
             "Cloud Enthusiast",
 

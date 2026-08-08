@@ -6,14 +6,22 @@
 LOADER
 ==============================*/
 
-window.addEventListener("load", () => {
+function hideLoader(){
 
     const loader = document.getElementById("loader");
 
+    if(!loader) return;
+
     loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
     loader.style.visibility = "hidden";
 
-});
+}
+
+document.addEventListener("DOMContentLoaded", hideLoader);
+
+// Safety net: never let the loader hang indefinitely
+setTimeout(hideLoader, 2500);
 
 
 /*==============================
