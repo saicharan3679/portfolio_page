@@ -12,7 +12,7 @@ if (typingElement && typeof Typed !== "undefined") {
 
             "Software Developer",
 
-            "Python Developer",
+            "Java Developer",
 
             "Cloud Enthusiast",
 
